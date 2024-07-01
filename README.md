@@ -1,4 +1,4 @@
-# AWS-EKS-cluster-video
+# AWS-EKS-cluster installations on an Ec2 instance in Aws using Aws CLi,IAM,Eksctl,Helm charts 
 
 # Update the ubuntu image to latest version:
 
