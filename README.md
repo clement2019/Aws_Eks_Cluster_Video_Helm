@@ -1,4 +1,4 @@
-# AWS-EKS-cluster installations on an Ec2 instance in Aws using Aws CLi,IAM,Eksctl,Helm charts 
+## AWS-EKS-cluster installations on an Ec2 instance in Aws using Aws CLi,IAM,Eksctl,Helm charts 
 
 # Update the ubuntu image to latest version:
 
@@ -7,9 +7,9 @@
 # Install AWS CLI tool:
 
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
-    apt install unzip 
+    sudo apt install unzip 
     unzip awscliv2.zip 
-    ./aws/install
+    sudo ./aws/install
     aws --version 
 
 
@@ -25,7 +25,7 @@
     sudo mv /tmp/eksctl /usr/local/bin
     eksctl version
 
-# Install Helm 
+# Install Helm (helm installation)
 
     curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
     sudo apt-get install apt-transport-https --yes
@@ -33,17 +33,47 @@
     sudo apt-get update
     sudo apt-get install helm
 
+# From Script (Another installation option for helm)
+ Helm now has an installer script that will automatically grab the latest version of Helm and install it locally.
+
+ You can fetch that script, and then execute it locally. It's well documented so that you can read through it and understand what it is doing before you run it.
+
+ $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+ $ chmod 700 get_helm.sh
+ $ ./get_helm.sh
+
+ # Now go to aws and install IAM user with accesskey and secretkey
+ create user and create a role with adminstratorFullaccess (as policy  permision)
+ download accesskey and secret key
+ Now on your terminal or favourite IDE run
+ aws configure
+
+ accesskey:<enter your aws IAM user accesskey>
+ secetkey:<enter your aws IAM user secretkey>
+ Region:<enter your aws Region>
+ formart:JSON
+
+ # Now check if you are authenticated to aws by runni g any of these commands
+
+ $aws sts get-caller-identity
+
+ $aws s3 ls
+
+ $aws iam list-users
+
+
+
 # Create the cluster:
 
      eksctl create cluster \
-                 --name myEKS \
-                 --version 1.21 \
-                 --region us-west-1 \
-                 --nodegroup-name worker-nodes \
+                 --name eks-cluster-104 \
+                 --version 1.30 \
+                 --region eu-west-2 \
+                 --nodegroup-name worker-nodes-group \
                  --node-type t3.small \
                  --nodes 2
             
 # Delete the cluster:
 
-    eksctl delete cluster --name myEKS
+    eksctl delete cluster --name eks-cluster-104
     
