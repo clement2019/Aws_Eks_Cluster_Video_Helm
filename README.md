@@ -1,4 +1,9 @@
-## AWS-EKS-cluster installations on an Ec2 instance in Aws using Aws CLi,IAM,Eksctl,Helm charts 
+## project title: AWS-EKS-cluster installations on an Ec2 instance in Aws 
+## using Aws CLi,IAM,Eksctl,Helm charts 
+
+ ## Requirement: 
+ Spin up an ubuntu Ec2 instance in Aws of type t2 small
+ connect to it through ssh connection form vscode or git bash
 
 # Update the ubuntu image to latest version:
 
