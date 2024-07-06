@@ -1,8 +1,9 @@
-## project title: AWS-EKS-cluster installations on an Ec2 instance in Aws 
+## Project Title: 
+AWS-EKS-cluster-video-Helm 
 
 ### using Aws CLi,IAM,Eksctl,Helm charts 
 
- ### Requirement: 
+ ### Requirement for provisioning Aws Eks cluster: 
  Spin up an ubuntu Ec2 instance in Aws of type t2 small
  connect to it through ssh connection from vscode or git bash or from your terminal if using mac
 
@@ -45,7 +46,9 @@
  You can fetch that script, and then execute it locally. It's well documented so that you can read through it and understand what it is doing before you run it.
 
  $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+
  $ chmod 700 get_helm.sh
+
  $ ./get_helm.sh
 
  ### Now go to aws and install IAM user with accesskey and secretkey
@@ -55,8 +58,11 @@
  aws configure
 
  accesskey:<enter your aws IAM user accesskey>
+
  secetkey:<enter your aws IAM user secretkey>
+
  Region:<enter your aws Region>
+
  formart:JSON
 
  ### Now check if you are authenticated to aws by runnig any of these commands
