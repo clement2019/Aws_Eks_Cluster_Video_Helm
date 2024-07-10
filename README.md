@@ -1,5 +1,5 @@
-## Project Title: 
-AWS-EKS-cluster-video-Helm 
+## Project Title: ANOTHER METHOD OF INSTALLING AWS EKS
+AWS-EKS-cluster--Helm 
 
 ### using Aws CLi,IAM,Eksctl,Helm charts 
 
