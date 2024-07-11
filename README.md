@@ -1,7 +1,7 @@
 ## Project Title: ANOTHER METHOD OF INSTALLING AWS EKS
 AWS-EKS-cluster--Helm 
 
-### using Aws CLi,IAM,Eksctl,Helm charts 
+### using Aws CLi,IAM,Eksctl,Helm charts  etc
 
  ### Requirement for provisioning Aws Eks cluster: 
  Spin up an ubuntu Ec2 instance in Aws of type t2 small
